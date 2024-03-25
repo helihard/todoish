@@ -1,0 +1,34 @@
+:root {
+  --backgroundcolor: hsl(217, 19%, 38%);
+  --red: #db4035;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--backgroundcolor);
+}
+
+#container {
+  background-color: whitesmoke;
+  width: 600px;
+  min-height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--red);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+aside {
+  padding: 20px;
+  background-color: rgb(245, 242, 239);
+}
+
+main {
+  padding: 20px;
+}
