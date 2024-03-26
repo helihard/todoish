@@ -25,7 +25,7 @@ body {
 }
 
 aside {
-  padding: 30px 10px 20px;
+  padding: 20px 10px 20px;
   background-color: rgb(245, 242, 239);
   color: rgb(40, 37, 37);
   display: flex;
@@ -43,7 +43,30 @@ aside div {
   transition: 0.1s ease-in-out;
 }
 
-aside div:nth-child(2) {
+.logo-div {
+  font-size: 10px;
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.logo-div:hover {
+  background-color: whitesmoke !important;
+}
+
+.logo-div i:nth-of-type(2) {
+  color: var(--red);
+}
+
+.logo-div span:last-child {
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+aside div:nth-child(3) {
   color: var(--red);
   font-weight: 500;
 }
