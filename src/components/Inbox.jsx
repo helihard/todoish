@@ -3,7 +3,7 @@ function Inbox() {
     <main>
       <h1>Inkorg</h1>
       <div id="tasks-list">
-        <p>
+        <div>
           <ul>
             <li>
               <input
@@ -43,7 +43,7 @@ function Inbox() {
             <i className="fas fa-solid fa-plus red"></i>
             <span>Lägg till uppgift</span>
           </div>
-        </p>
+        </div>
       </div>
     </main>
   );
