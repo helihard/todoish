@@ -11,6 +11,7 @@ body {
   place-items: center;
   min-height: 100vh;
   background-color: var(--backgroundcolor);
+  font-family: "Inter", sans-serif;
 }
 
 #container {
@@ -24,7 +25,7 @@ body {
 }
 
 aside {
-  padding: 20px 10px;
+  padding: 30px 10px 20px;
   background-color: rgb(245, 242, 239);
   color: rgb(40, 37, 37);
   display: flex;
@@ -44,10 +45,20 @@ aside div {
 
 aside div:nth-child(2) {
   color: var(--red);
+  font-weight: 500;
 }
 
-aside div:hover {
+aside div:last-child {
+  color: var(--red);
   background-color: antiquewhite;
+}
+
+aside span {
+  font-size: 14px;
+}
+
+aside div:not(:last-child):hover {
+  background-color: lightgray;
 }
 
 aside div:active {
@@ -55,5 +66,48 @@ aside div:active {
 }
 
 main {
-  padding: 20px;
+  padding: 35px 20px 20px;
+}
+
+main h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+#tasks-list {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+#tasks-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#tasks-list ul li {
+  border-bottom: 1px solid lightgrey;
+}
+
+#tasks-list ul li:first-child {
+  padding-bottom: 10px;
+}
+
+#tasks-list ul li:not(:first-child) {
+  padding: 10px 0;
+}
+
+.red {
+  color: var(--red);
+}
+
+#add-task-from-main {
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+#add-task-from-main span {
+  font-size: 14px;
+  color: grey;
 }
