@@ -1,6 +1,7 @@
 :root {
   --backgroundcolor: hsl(217, 19%, 38%);
   --red: #db4035;
+  --softblack: rgb(27, 36, 38);
 }
 
 body {
@@ -56,7 +57,11 @@ aside div {
   background-color: whitesmoke !important;
 }
 
-.logo-div i:nth-of-type(2) {
+.logo-div i:first-of-type {
+  color: var(--softblack);
+}
+
+.logo-div i:last-of-type {
   color: var(--red);
 }
 
@@ -64,6 +69,10 @@ aside div {
   color: var(--red);
   font-size: 18px;
   font-weight: 600;
+}
+
+#user-icon {
+  color: var(--softblack);
 }
 
 aside div:nth-child(3) {
