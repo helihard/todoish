@@ -1,3 +1,5 @@
+import AddTaskDropdown from "./AddTaskDropdown.jsx";
+
 function Inbox() {
   return (
     <main>
@@ -13,7 +15,7 @@ function Inbox() {
                 className="radio-check"
               />{" "}
               <label htmlFor="radio-1" className="radio-check-label">
-                Göra något
+                Dropdown i main
               </label>
             </li>
             <li>
@@ -24,7 +26,7 @@ function Inbox() {
                 className="radio-check"
               />{" "}
               <label htmlFor="radio-2" className="radio-check-label">
-                Göra något annat
+                Modal i sidebar
               </label>
             </li>
             <li>
@@ -35,14 +37,28 @@ function Inbox() {
                 className="radio-check"
               />{" "}
               <label htmlFor="radio-3" className="radio-check-label">
-                Göra något mer
+                Mockdata
+              </label>
+            </li>
+            <li>
+              <input
+                id="radio-4"
+                type="radio"
+                name="radio-group"
+                className="radio-check"
+              />{" "}
+              <label htmlFor="radio-4" className="radio-check-label">
+                Databas
               </label>
             </li>
           </ul>
-          <div id="add-task-from-main">
-            <i className="fas fa-solid fa-plus red"></i>
+          <div className="add-task-from-main" id="hover-effect">
+            <button id="circle">
+              <i className="fas fa-solid fa-plus" id="plus-sign-icon"></i>
+            </button>
             <span>Lägg till uppgift</span>
           </div>
+          <AddTaskDropdown />
         </div>
       </div>
     </main>

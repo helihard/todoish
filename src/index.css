@@ -1,6 +1,6 @@
 :root {
-  --backgroundcolor: hsl(217, 19%, 38%);
-  --red: #db4035;
+  --backgroundcolor: rgb(78, 93, 115);
+  --red: rgb(219, 64, 53);
   --softblack: rgb(27, 36, 38);
 }
 
@@ -17,7 +17,7 @@ body {
 
 #container {
   background-color: whitesmoke;
-  width: 600px;
+  width: 650px;
   min-height: 600px;
   border-radius: 10px;
   overflow: hidden;
@@ -42,6 +42,7 @@ aside div {
   align-items: center;
   border-radius: 5px;
   transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .logo-div {
@@ -98,7 +99,7 @@ aside div:not(:last-child):hover {
 }*/
 
 main {
-  padding: 35px 20px 20px;
+  padding: 35px 50px 20px 20px;
 }
 
 main h1 {
@@ -168,13 +169,54 @@ main h1 {
   color: var(--red);
 }
 
-#add-task-from-main {
-  font-size: 14px;
+.add-task-from-main {
   display: flex;
+  align-items: center;
   gap: 10px;
+  color: grey;
 }
 
-#add-task-from-main span {
+.add-task-from-main span:last-child {
   font-size: 14px;
-  color: grey;
+}
+
+#hover-effect > * {
+  transition: 0.1s ease-in-out;
+}
+
+#hover-effect:hover span {
+  color: var(--red) !important;
+}
+
+#hover-effect:hover #circle {
+  background-color: var(--red) !important;
+}
+
+#hover-effect:hover #plus-sign-icon {
+  color: whitesmoke !important;
+}
+
+#circle {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  outline: none;
+  background-color: whitesmoke;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#plus-sign-icon {
+  font-size: 17px;
+  color: var(--red);
+}
+
+#dropdown {
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 10px;
 }
