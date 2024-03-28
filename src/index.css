@@ -154,7 +154,7 @@ main h1 {
   width: 14px;
   height: 14px;
   padding: 2px;
-  margin-right: 10px;
+  margin-right: 0px;
   text-align: center;
   border-radius: 50%;
 }
@@ -164,6 +164,10 @@ main h1 {
   font-family: "FontAwesome";
   color: grey;
   border: 1px solid var(--red);
+}
+
+.todo-span {
+  margin-left: 10px;
 }
 
 .todo-checked-off {

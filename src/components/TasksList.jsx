@@ -59,14 +59,12 @@ function TasksList() {
             }
           />
           &nbsp;
-          <label
-            htmlFor={todo.id}
-            className={
-              "todo-checkbox-label " + (todo.done ? "todo-checked-off" : "")
-            }
+          <label htmlFor={todo.id} className="todo-checkbox-label"></label>
+          <span
+            className={"todo-span " + (todo.done ? "todo-checked-off" : "")}
           >
             {todo.description}
-          </label>
+          </span>
         </li>
       ))}
     </ul>
