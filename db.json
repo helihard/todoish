@@ -1,20 +1,24 @@
 {
   "todos": [
     {
-      "id": 1,
-      "description": "Dropdown i main"
+      "id": "1",
+      "description": "Dropdown i main",
+      "done": false
     },
     {
-      "id": 2,
-      "description": "Modal i sidebar"
+      "id": "2",
+      "description": "Modal i sidebar",
+      "done": false
     },
     {
-      "id": 3,
-      "description": "Mockdata"
+      "id": "3",
+      "description": "Mockdata",
+      "done": false
     },
     {
-      "id": 4,
-      "description": "Databas"
+      "id": "4",
+      "description": "Databas",
+      "done": false
     }
   ]
 }
