@@ -19,11 +19,36 @@ function TasksList() {
     return null;
   }
 
+  async function updateTodoStatus(id, checked) {
+    try {
+      const response = await fetch(`http://localhost:3000/todos/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ done: checked }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Det gick inte att slutföra åtgärden");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <ul>
       {todos.map((todo) => (
         <li key={todo.id}>
-          <input id={todo.id} type="checkbox" className="todo-checkbox" />
+          <input
+            id={todo.id}
+            type="checkbox"
+            className="todo-checkbox"
+            onChange={(event) =>
+              updateTodoStatus(todo.id, event.target.checked)
+            }
+          />
           &nbsp;
           <label htmlFor={todo.id} className="todo-checkbox-label">
             {todo.description}
