@@ -32,6 +32,14 @@ function TasksList() {
       if (!response.ok) {
         throw new Error("Det gick inte att slutföra åtgärden");
       }
+
+      const updatedTodo = await response.json();
+
+      setTodos((prevTodos) =>
+        prevTodos.map((todo) =>
+          todo.id === updatedTodo.id ? updatedTodo : todo
+        )
+      );
     } catch (error) {
       console.error(error);
     }
@@ -45,12 +53,18 @@ function TasksList() {
             id={todo.id}
             type="checkbox"
             className="todo-checkbox"
+            checked={todo.done}
             onChange={(event) =>
               updateTodoStatus(todo.id, event.target.checked)
             }
           />
           &nbsp;
-          <label htmlFor={todo.id} className="todo-checkbox-label">
+          <label
+            htmlFor={todo.id}
+            className={
+              "todo-checkbox-label " + (todo.done ? "todo-checked-off" : "")
+            }
+          >
             {todo.description}
           </label>
         </li>

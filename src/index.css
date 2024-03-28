@@ -163,6 +163,11 @@ main h1 {
   content: "\f00c";
   font-family: "FontAwesome";
   color: grey;
+  border: 1px solid var(--red);
+}
+
+.todo-checked-off {
+  text-decoration: line-through;
 }
 
 .red {
