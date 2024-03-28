@@ -119,6 +119,8 @@ main h1 {
 }
 
 #tasks-list ul li {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -139,10 +141,6 @@ main h1 {
 .todo-checkbox-label {
   display: inline-block;
   cursor: pointer;
-}
-
-.todo-checkbox-label {
-  position: relative;
 }
 
 .todo-checkbox + .todo-checkbox-label:before {
@@ -168,6 +166,17 @@ main h1 {
 
 .todo-span {
   margin-left: 10px;
+}
+
+.todo-span input {
+  border: none;
+  outline: none;
+  background-color: lightgray;
+  border-radius: 3px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  position: relative;
+  left: -2px;
 }
 
 .todo-checked-off {
