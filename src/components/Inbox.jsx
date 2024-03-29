@@ -9,9 +9,9 @@ function Inbox() {
         <div>
           <TasksList />
           <div className="add-task-from-main" id="hover-effect">
-            <button id="circle">
+            <p id="circle">
               <i className="fas fa-solid fa-plus" id="plus-sign-icon"></i>
-            </button>
+            </p>
             <span>Lägg till uppgift</span>
           </div>
           <AddTaskDropdown />

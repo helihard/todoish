@@ -192,6 +192,7 @@ main h1 {
   align-items: center;
   gap: 10px;
   color: grey;
+  padding-left: 4px;
 }
 
 .add-task-from-main span:last-child {
@@ -215,12 +216,14 @@ main h1 {
 }
 
 #circle {
+  margin: 0;
+  padding: 0;
   border: 1px solid transparent;
   border-radius: 50%;
   outline: none;
   background-color: whitesmoke;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
