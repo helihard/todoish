@@ -51,6 +51,9 @@ function TodoList() {
               <>{todo.description}</>
             )}
           </span>
+          <span>
+            <i className="fa-solid fa-trash"></i>
+          </span>
         </li>
       ))}
     </ul>

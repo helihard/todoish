@@ -132,6 +132,20 @@ main h1 {
   padding: 10px 0;
 }
 
+#todos-list ul li span:last-child {
+  margin-left: auto;
+  color: lightgrey;
+  transition: 0.1s ease-in-out;
+}
+
+#todos-list ul li span:last-child:hover {
+  color: var(--softblack);
+}
+
+#todos-list ul li span:last-child:active {
+  color: var(--softblack);
+}
+
 .todo-checkbox {
   opacity: 0;
   position: absolute;
