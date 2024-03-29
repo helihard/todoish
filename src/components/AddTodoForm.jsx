@@ -27,7 +27,11 @@ function AddTodoForm({ onSubmit }) {
           autoFocus
         />
         <div>
-          <button type="submit" id="submit-todo">
+          <button
+            type="submit"
+            id="submit-todo"
+            disabled={description.length === 0}
+          >
             Lägg till uppgift
           </button>
         </div>

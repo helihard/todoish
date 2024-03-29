@@ -308,3 +308,7 @@ main h1 {
   font-weight: 500;
   cursor: pointer;
 }
+
+#submit-todo:disabled {
+  cursor: not-allowed;
+}
