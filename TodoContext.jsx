@@ -150,6 +150,7 @@ export function TodoProvider({ children }) {
         handleTodoKeyDown,
         deleteTodo,
         dropdownShow,
+        setDropdownShow,
         toggleDropdownDiv,
       }}
     >

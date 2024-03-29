@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TodoContext } from "../../TodoContext.jsx";
 
 function AddTodoForm({ onSubmit }) {
   const [description, setDescription] = useState("");
+  const { setDropdownShow } = useContext(TodoContext);
 
   function handleSubmit(event) {
     event.preventDefault();
+    if (!description.trim()) return;
 
     onSubmit(description);
 
     setDescription("");
+    setDropdownShow(false);
   }
+
   return (
     <div id="dropdown">
       <form onSubmit={handleSubmit}>
