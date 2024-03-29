@@ -112,6 +112,24 @@ export function TodoProvider({ children }) {
     }
   };
 
+  async function deleteTodo(id) {
+    try {
+      const response = await fetch(`http://localhost:3000/todos/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Det gick inte att slutföra åtgärden");
+      }
+      setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <TodoContext.Provider
       value={{
@@ -125,6 +143,7 @@ export function TodoProvider({ children }) {
         handleTodoClick,
         handleTodoBlur,
         handleTodoKeyDown,
+        deleteTodo,
       }}
     >
       {children}

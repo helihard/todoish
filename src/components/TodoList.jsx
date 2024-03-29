@@ -11,6 +11,7 @@ function TodoList() {
     handleTodoClick,
     handleTodoBlur,
     handleTodoKeyDown,
+    deleteTodo,
   } = useContext(TodoContext);
 
   if (!todos.length) {
@@ -52,7 +53,10 @@ function TodoList() {
             )}
           </span>
           <span>
-            <i className="fa-solid fa-trash"></i>
+            <i
+              className="fa-solid fa-trash"
+              onClick={() => deleteTodo(todo.id)}
+            ></i>
           </span>
         </li>
       ))}
