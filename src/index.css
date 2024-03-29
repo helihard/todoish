@@ -259,7 +259,20 @@ main h1 {
   color: var(--red);
 }
 
+#x-icon {
+  font-size: 21px;
+  color: var(--red);
+  position: relative;
+  top: -0.25px;
+}
+
+#visible-dropdown {
+  display: block;
+  margin-left: 5px;
+}
+
 #dropdown {
+  display: flex;
   border: 1px solid grey;
   border-radius: 7px;
   padding: 10px;
@@ -273,4 +286,24 @@ main h1 {
   background-color: whitesmoke;
   font-family: "Inter", sans-serif;
   font-size: 14px;
+}
+
+#dropdown form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#submit-todo {
+  border: 0;
+  outline: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }

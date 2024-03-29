@@ -8,12 +8,6 @@ function Inbox() {
       <div id="todos-list">
         <div>
           <TodoList />
-          <div className="add-todo-from-main" id="hover-effect">
-            <p id="circle">
-              <i className="fas fa-solid fa-plus" id="plus-sign-icon"></i>
-            </p>
-            <span>Lägg till uppgift</span>
-          </div>
           <AddTodoDropdown />
         </div>
       </div>

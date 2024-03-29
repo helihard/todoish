@@ -20,11 +20,11 @@ function AddTodoForm({ onSubmit }) {
           type="text"
           placeholder="Uppgift"
           autoFocus
-          required
         />
         <div>
-          <button>Avbryt</button>
-          <button type="submit">Lägg till uppgift</button>
+          <button type="submit" id="submit-todo">
+            Lägg till uppgift
+          </button>
         </div>
       </form>
     </div>

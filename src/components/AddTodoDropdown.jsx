@@ -1,13 +1,39 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { TodoContext } from "../../TodoContext.jsx";
 import AddTodoForm from "./AddTodoForm.jsx";
 
 function AddTodoDropdown() {
   const { addTodo } = useContext(TodoContext);
+  const [dropdownShow, setDropdownShow] = useState(false);
+
+  function toggleDropdownDiv() {
+    setDropdownShow((dropdownShow) => !dropdownShow);
+  }
 
   return (
     <>
-      <AddTodoForm onSubmit={addTodo} />
+      <div
+        className="add-todo-from-main"
+        id={dropdownShow ? "" : "hover-effect"}
+      >
+        <p id="circle">
+          {dropdownShow ? (
+            <i
+              className="fa-solid fa-circle-xmark"
+              id="x-icon"
+              onClick={toggleDropdownDiv}
+            ></i>
+          ) : (
+            <i
+              className="fas fa-solid fa-plus"
+              id="plus-sign-icon"
+              onClick={toggleDropdownDiv}
+            ></i>
+          )}
+        </p>
+        {dropdownShow ? <span></span> : <span>Lägg till uppgift</span>}
+      </div>
+      {dropdownShow && <AddTodoForm onSubmit={addTodo} />}
     </>
   );
 }
