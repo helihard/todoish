@@ -241,3 +241,12 @@ main h1 {
   padding: 10px;
   margin-top: 10px;
 }
+
+#dropdown input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
