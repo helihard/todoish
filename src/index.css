@@ -76,6 +76,10 @@ aside div {
   color: var(--softblack);
 }
 
+strong {
+  font-weight: 600;
+}
+
 aside div:nth-child(3) {
   color: var(--red);
   font-weight: 500;
@@ -84,6 +88,12 @@ aside div:nth-child(3) {
 aside div:last-child {
   color: var(--red);
   background-color: antiquewhite;
+}
+
+#user-icon,
+#add-todo-icon,
+#inbox-icon {
+  width: 22px;
 }
 
 aside span {

@@ -10,7 +10,9 @@ function Sidebar() {
       </div>
       <div>
         <i className="fa-solid fa-user fa-lg" id="user-icon"></i>
-        <span>Användare</span>
+        <span>
+          <strong>Användare</strong>
+        </span>
       </div>
       <div>
         <i className="fa-solid fa-circle-plus fa-lg" id="add-todo-icon"></i>
