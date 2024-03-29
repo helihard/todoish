@@ -55,7 +55,7 @@ aside div {
 }
 
 .logo-div:hover {
-  background-color: whitesmoke !important;
+  background-color: rgb(245, 242, 239) !important;
 }
 
 .logo-div i:first-of-type {
