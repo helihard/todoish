@@ -3,12 +3,7 @@ import { TodoContext } from "../../TodoContext.jsx";
 import AddTodoForm from "./AddTodoForm.jsx";
 
 function AddTodoDropdown() {
-  const { addTodo } = useContext(TodoContext);
-  const [dropdownShow, setDropdownShow] = useState(false);
-
-  function toggleDropdownDiv() {
-    setDropdownShow((dropdownShow) => !dropdownShow);
-  }
+  const { addTodo, dropdownShow, toggleDropdownDiv } = useContext(TodoContext);
 
   return (
     <>

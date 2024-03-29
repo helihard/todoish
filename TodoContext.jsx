@@ -6,6 +6,7 @@ export function TodoProvider({ children }) {
   const [todos, setTodos] = useState([]);
   const [editableTodoId, setEditableTodoId] = useState(null);
   const [currentTodoDescription, setCurrentTodoDescription] = useState("");
+  const [dropdownShow, setDropdownShow] = useState(false);
 
   useEffect(() => {
     fetchTodos();
@@ -130,6 +131,10 @@ export function TodoProvider({ children }) {
     }
   }
 
+  function toggleDropdownDiv() {
+    setDropdownShow((dropdownShow) => !dropdownShow);
+  }
+
   return (
     <TodoContext.Provider
       value={{
@@ -144,6 +149,8 @@ export function TodoProvider({ children }) {
         handleTodoBlur,
         handleTodoKeyDown,
         deleteTodo,
+        dropdownShow,
+        toggleDropdownDiv,
       }}
     >
       {children}
