@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AddTaskForm({ onSubmit }) {
+function AddTodoForm({ onSubmit }) {
   const [description, setDescription] = useState("");
 
   function handleSubmit(event) {
@@ -30,4 +30,4 @@ function AddTaskForm({ onSubmit }) {
   );
 }
 
-export default AddTaskForm;
+export default AddTodoForm;

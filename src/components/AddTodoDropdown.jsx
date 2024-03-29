@@ -1,6 +1,6 @@
-import AddTaskForm from "./AddTaskForm.jsx";
+import AddTodoForm from "./AddTodoForm.jsx";
 
-function AddTaskDropdown() {
+function AddTodoDropdown() {
   const postTodo = async (description) => {
     try {
       const response = await fetch("http://localhost:3000/todos/", {
@@ -22,9 +22,9 @@ function AddTaskDropdown() {
 
   return (
     <>
-      <AddTaskForm onSubmit={postTodo} />
+      <AddTodoForm onSubmit={postTodo} />
     </>
   );
 }
 
-export default AddTaskDropdown;
+export default AddTodoDropdown;

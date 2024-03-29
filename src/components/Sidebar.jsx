@@ -13,7 +13,7 @@ function Sidebar() {
         <span>Användare</span>
       </div>
       <div>
-        <i className="fa-solid fa-circle-plus fa-lg" id="add-task-icon"></i>
+        <i className="fa-solid fa-circle-plus fa-lg" id="add-todo-icon"></i>
         <span>Lägg till uppgift</span>
       </div>
       <div>

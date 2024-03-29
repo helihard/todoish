@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-function TasksList() {
+function TodoList() {
   const [todos, setTodos] = useState([]);
   const [currentTodoDescription, setCurrentTodoDescription] = useState("");
   const [editableTodoId, setEditableTodoId] = useState(null);
@@ -129,4 +129,4 @@ function TasksList() {
   );
 }
 
-export default TasksList;
+export default TodoList;

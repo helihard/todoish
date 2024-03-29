@@ -108,27 +108,27 @@ main h1 {
   font-size: 24px;
 }
 
-#tasks-list {
+#todos-list {
   padding-top: 10px;
   font-size: 14px;
 }
 
-#tasks-list ul {
+#todos-list ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-#tasks-list ul li {
+#todos-list ul li {
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgrey;
 }
 
-#tasks-list ul li:first-child {
+#todos-list ul li:first-child {
   padding-bottom: 10px;
 }
 
-#tasks-list ul li:not(:first-child) {
+#todos-list ul li:not(:first-child) {
   padding: 10px 0;
 }
 
@@ -187,7 +187,7 @@ main h1 {
   color: var(--red);
 }
 
-.add-task-from-main {
+.add-todo-from-main {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -195,7 +195,7 @@ main h1 {
   padding-left: 4px;
 }
 
-.add-task-from-main span:last-child {
+.add-todo-from-main span:last-child {
   font-size: 14px;
 }
 
