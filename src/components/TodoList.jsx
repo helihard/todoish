@@ -1,93 +1,21 @@
-import { useState, useEffect } from "react";
-function TodoList() {
-  const [todos, setTodos] = useState([]);
-  const [currentTodoDescription, setCurrentTodoDescription] = useState("");
-  const [editableTodoId, setEditableTodoId] = useState(null);
+import { useContext } from "react";
+import { TodoContext } from "../../TodoContext.jsx";
 
-  useEffect(() => {
-    async function fetchTodos() {
-      try {
-        const response = await fetch("http://localhost:3000/todos");
-        const result = await response.json();
-        setTodos(result);
-      } catch (error) {
-        console.log("Det gick inte att hämta uppgifter", error);
-      }
-    }
-    fetchTodos();
-  }, []);
+function TodoList() {
+  const {
+    todos,
+    editableTodoId,
+    currentTodoDescription,
+    setCurrentTodoDescription,
+    updateTodoStatus,
+    handleTodoClick,
+    handleTodoBlur,
+    handleTodoKeyDown,
+  } = useContext(TodoContext);
 
   if (!todos.length) {
     return null;
   }
-
-  async function updateTodoStatus(id, checked) {
-    try {
-      const response = await fetch(`http://localhost:3000/todos/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ done: checked }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Det gick inte att slutföra åtgärden");
-      }
-
-      const updatedTodo = await response.json();
-
-      setTodos((prevTodos) =>
-        prevTodos.map((todo) =>
-          todo.id === updatedTodo.id ? updatedTodo : todo
-        )
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  const handleTodoClick = (id) => {
-    setEditableTodoId(id);
-
-    const todo = todos.find((todo) => todo.id === id);
-    setCurrentTodoDescription(todo.description);
-  };
-
-  const handleTodoBlur = async (id) => {
-    setEditableTodoId(null);
-
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, description: currentTodoDescription };
-      }
-      return todo;
-    });
-
-    setTodos(updatedTodos);
-
-    try {
-      const response = await fetch(`http://localhost:3000/todos/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application.json",
-        },
-        body: JSON.stringify({ description: currentTodoDescription }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Beskrivningen kunde inte uppdateras");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleTodoKeyDown = (event, id) => {
-    if (event.key === "Enter") {
-      handleTodoBlur(id);
-    }
-  };
 
   return (
     <ul>
