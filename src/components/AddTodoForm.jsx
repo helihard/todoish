@@ -14,6 +14,7 @@ function AddTodoForm({ onSubmit }) {
     <div id="dropdown">
       <form onSubmit={handleSubmit}>
         <input
+          name="add-todo"
           value={description}
           onChange={(event) => setDescription(event.target.value)}
           type="text"
