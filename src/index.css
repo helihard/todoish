@@ -104,10 +104,6 @@ aside div:not(:last-child):hover {
   background-color: lightgray;
 }
 
-/*aside div:active {
-  color: var(--red);
-}*/
-
 main {
   padding: 35px 50px 20px 20px;
 }
@@ -264,11 +260,6 @@ main h1 {
   color: var(--red);
   position: relative;
   top: -0.25px;
-}
-
-#visible-dropdown {
-  display: block;
-  margin-left: 5px;
 }
 
 #dropdown {
