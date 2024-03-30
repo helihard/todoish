@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import Modal from "react-modal";
 
 export const TodoContext = createContext();
 
@@ -7,6 +8,7 @@ export function TodoProvider({ children }) {
   const [editableTodoId, setEditableTodoId] = useState(null);
   const [currentTodoDescription, setCurrentTodoDescription] = useState("");
   const [dropdownShow, setDropdownShow] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     fetchTodos();
@@ -142,6 +144,15 @@ export function TodoProvider({ children }) {
     setDropdownShow((dropdownShow) => !dropdownShow);
   }
 
+  const openModal = () => {
+    Modal.setAppElement("#container");
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <TodoContext.Provider
       value={{
@@ -159,6 +170,10 @@ export function TodoProvider({ children }) {
         dropdownShow,
         setDropdownShow,
         toggleDropdownDiv,
+        modalOpen,
+        setModalOpen,
+        openModal,
+        closeModal,
       }}
     >
       {children}

@@ -1,17 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { TodoContext } from "../../TodoContext.jsx";
 import Modal from "react-modal";
+import AddTodoForm from "./AddTodoForm.jsx";
 
 function Sidebar() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    Modal.setAppElement("#container");
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const { modalOpen, openModal, closeModal, addTodo } = useContext(TodoContext);
 
   return (
     <aside>
@@ -33,7 +26,7 @@ function Sidebar() {
         <span>Lägg till uppgift</span>
       </div>
       <Modal isOpen={modalOpen} onRequestClose={closeModal} className="modal">
-        Test med modal
+        <AddTodoForm onSubmit={addTodo} />
       </Modal>
       <div>
         <i className="fa-solid fa-inbox fa-lg" id="inbox-icon"></i>

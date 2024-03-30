@@ -3,7 +3,7 @@ import { TodoContext } from "../../TodoContext.jsx";
 
 function AddTodoForm({ onSubmit }) {
   const [description, setDescription] = useState("");
-  const { setDropdownShow } = useContext(TodoContext);
+  const { setDropdownShow, closeModal } = useContext(TodoContext);
 
   function handleSubmit(event) {
     event.preventDefault();
