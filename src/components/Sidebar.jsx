@@ -25,7 +25,12 @@ function Sidebar() {
         <i className="fa-solid fa-circle-plus fa-lg" id="add-todo-icon"></i>
         <span>Lägg till uppgift</span>
       </div>
-      <Modal isOpen={modalOpen} onRequestClose={closeModal} className="modal">
+      <Modal
+        isOpen={modalOpen}
+        onRequestClose={closeModal}
+        className="modal"
+        overlayClassName="modal-bg"
+      >
         <AddTodoModal onSubmit={addTodo} />
       </Modal>
       <div>
