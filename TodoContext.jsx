@@ -81,9 +81,16 @@ export function TodoProvider({ children }) {
   const handleTodoBlur = async (id) => {
     setEditableTodoId(null);
 
+    let updatedDescription = currentTodoDescription.trim();
+    let originalDescription;
+
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
-        return { ...todo, description: currentTodoDescription };
+        originalDescription = todo.description;
+        if (updatedDescription.length === 0) {
+          updatedDescription = originalDescription;
+        }
+        return { ...todo, description: updatedDescription };
       }
       return todo;
     });
@@ -96,7 +103,7 @@ export function TodoProvider({ children }) {
         headers: {
           "Content-Type": "application.json",
         },
-        body: JSON.stringify({ description: currentTodoDescription }),
+        body: JSON.stringify({ description: updatedDescription }),
       });
 
       if (!response.ok) {

@@ -42,7 +42,6 @@ function TodoList() {
                 type="text"
                 value={currentTodoDescription}
                 onChange={(event) =>
-                  event.target.value.trim().length > 0 &&
                   setCurrentTodoDescription(event.target.value)
                 }
                 onBlur={() => handleTodoBlur(todo.id)}
