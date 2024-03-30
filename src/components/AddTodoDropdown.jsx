@@ -26,7 +26,13 @@ function AddTodoDropdown() {
             ></i>
           )}
         </p>
-        {dropdownShow ? <span></span> : <span>Lägg till uppgift</span>}
+        {dropdownShow ? (
+          <span></span>
+        ) : (
+          <span onClick={toggleDropdownDiv} style={{ cursor: "pointer" }}>
+            Lägg till uppgift
+          </span>
+        )}
       </div>
       {dropdownShow && <AddTodoForm onSubmit={addTodo} />}
     </>
