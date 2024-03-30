@@ -23,7 +23,6 @@ function AddTodoForm({ onSubmit }) {
           value={description}
           onChange={(event) => setDescription(event.target.value)}
           type="text"
-          placeholder="Uppgift"
           autoFocus
         />
         <div>

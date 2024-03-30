@@ -55,6 +55,7 @@ function TodoList() {
           <span>
             <i
               className="fa-solid fa-trash"
+              style={{ cursor: "pointer" }}
               onClick={() => deleteTodo(todo.id)}
             ></i>
           </span>
