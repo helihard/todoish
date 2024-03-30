@@ -10,6 +10,7 @@ function AddTodoDropdown() {
       <div
         className="add-todo-from-main"
         id={dropdownShow ? "" : "hover-effect"}
+        style={{ width: "max-content" }}
       >
         <p id="circle">
           {dropdownShow ? (
