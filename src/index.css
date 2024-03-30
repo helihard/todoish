@@ -303,3 +303,17 @@ main h1 {
 #submit-todo:disabled {
   cursor: not-allowed;
 }
+
+.modal {
+  background-color: whitesmoke;
+  width: 380px;
+  height: 150px;
+  outline: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+}

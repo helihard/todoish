@@ -1,4 +1,18 @@
+import { useState } from "react";
+import Modal from "react-modal";
+
 function Sidebar() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    Modal.setAppElement("#container");
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <aside>
       <div className="logo-div">
@@ -14,10 +28,13 @@ function Sidebar() {
           <strong>Användare</strong>
         </span>
       </div>
-      <div>
+      <div onClick={openModal}>
         <i className="fa-solid fa-circle-plus fa-lg" id="add-todo-icon"></i>
         <span>Lägg till uppgift</span>
       </div>
+      <Modal isOpen={modalOpen} onRequestClose={closeModal} className="modal">
+        Test med modal
+      </Modal>
       <div>
         <i className="fa-solid fa-inbox fa-lg" id="inbox-icon"></i>
         <span>Inkorg</span>
