@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { TodoContext } from "../../TodoContext.jsx";
 import Modal from "react-modal";
-import AddTodoForm from "./AddTodoForm.jsx";
+import AddTodoModal from "./AddTodoModal.jsx";
 
 function Sidebar() {
   const { modalOpen, openModal, closeModal, addTodo } = useContext(TodoContext);
@@ -26,7 +26,7 @@ function Sidebar() {
         <span>Lägg till uppgift</span>
       </div>
       <Modal isOpen={modalOpen} onRequestClose={closeModal} className="modal">
-        <AddTodoForm onSubmit={addTodo} />
+        <AddTodoModal onSubmit={addTodo} />
       </Modal>
       <div>
         <i className="fa-solid fa-inbox fa-lg" id="inbox-icon"></i>
