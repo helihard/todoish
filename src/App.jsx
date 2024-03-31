@@ -1,6 +1,6 @@
-import MainContainer from "./components/MainContainer";
+import Container from "./components/Container";
 
 function App() {
-  return <MainContainer />;
+  return <Container />;
 }
 export default App;

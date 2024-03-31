@@ -1,7 +1,7 @@
 import Sidebar from "./Sidebar.jsx";
 import Inbox from "./Inbox.jsx";
 
-function MainContainer() {
+function Container() {
   return (
     <div id="container">
       <Sidebar />
@@ -10,4 +10,4 @@ function MainContainer() {
   );
 }
 
-export default MainContainer;
+export default Container;
