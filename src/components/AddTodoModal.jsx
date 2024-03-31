@@ -7,7 +7,6 @@ function AddTodoForm({ onSubmit }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (!description.trim()) return;
 
     onSubmit(description);
 
@@ -31,7 +30,7 @@ function AddTodoForm({ onSubmit }) {
             <button
               type="submit"
               id="submit-todo"
-              disabled={description.length === 0}
+              disabled={description.trim().length === 0}
             >
               Lägg till uppgift
             </button>
