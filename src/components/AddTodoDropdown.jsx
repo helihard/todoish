@@ -15,8 +15,7 @@ function AddTodoDropdown() {
         <p id="circle">
           {dropdownShow ? (
             <i
-              className="fa-solid fa-circle-xmark"
-              id="x-icon"
+              className="fa-solid fa-circle-xmark x-icon"
               onClick={toggleDropdownDiv}
             ></i>
           ) : (
