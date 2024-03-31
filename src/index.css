@@ -261,7 +261,7 @@ main h1 {
   color: var(--red);
 }
 
-#x-icon {
+.x-icon {
   font-size: 21px;
   color: var(--red);
   position: relative;
@@ -325,7 +325,7 @@ main h1 {
 }
 
 .modal-bg {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
   left: 0;
