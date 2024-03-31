@@ -1,23 +1,23 @@
 {
   "todos": [
     {
-      "id": "1",
-      "description": "Dropdown i main",
-      "done": false
-    },
-    {
-      "id": "2",
+      "id": "4e0b",
       "description": "Modal i sidebar",
-      "done": false
+      "done": true
     },
     {
-      "id": "3",
+      "id": "9d47",
+      "description": "Dropdown i inbox",
+      "done": true
+    },
+    {
+      "id": "646b",
       "description": "Mockdata",
-      "done": false
+      "done": true
     },
     {
-      "id": "4",
-      "description": "Databas",
+      "id": "4b99",
+      "description": "Lära mig mer om styling av React Modal",
       "done": false
     }
   ]

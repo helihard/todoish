@@ -33,6 +33,7 @@ export function TodoProvider({ children }) {
         },
         body: JSON.stringify({
           description,
+          done: false,
         }),
       });
 
