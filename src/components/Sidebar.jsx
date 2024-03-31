@@ -18,7 +18,7 @@ function Sidebar() {
       <div>
         <i className="fa-solid fa-user fa-lg" id="user-icon"></i>
         <span>
-          <strong>Användare</strong>
+          <strong>Emprex Enbyte</strong>
         </span>
       </div>
       <div onClick={openModal}>
